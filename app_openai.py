@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
@@ -35,13 +35,9 @@ def get_vectorstore(text_chunks):
 
 
 
-
-
 def main():
 
-    #openai.api_key = st.secrets['OPENAI_API_KEY']
-
-
+    load_dotenv()
 
     st.set_page_config(page_title='PDF Chatbot', page_icon='🤖')
 
