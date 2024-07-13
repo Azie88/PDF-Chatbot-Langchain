@@ -12,7 +12,6 @@ from htmlfiles import css, user_template, bot_template
 
 
 
-
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
@@ -95,8 +94,6 @@ def main():
     #st.write(bot_template.replace('{{MSG}}', 'Hello Human'),unsafe_allow_html=True)
 
 
-
-
     with st.sidebar:
         st.subheader('Your files')
         pdf_docs = st.file_uploader(
@@ -118,10 +115,6 @@ def main():
                 #coversation chain
                 st.session_state.conversation = get_conversation_chain(vectorstore)
             
-
-
-
-
 
 if __name__ == '__main__':
     main()
